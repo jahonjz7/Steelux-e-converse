@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог — Steelux Bektopi</title>
+  <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <h1 class="logo">Steelux Bektopi</h1>
+
+    <nav class="header-nav">
+      <a href="index.html" class="nav-link" data-i18n="nav-home">Домой</a>
+      <a href="catalog.html" class="nav-link active" data-i18n="nav-catalog">Каталог</a>
+      <a href="cart.html" class="nav-link" data-i18n="nav-about">О нас</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="lang-switcher">
+        <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
+        <button class="lang-btn" onclick="changeLanguage('uz')">UZ</button>
+        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+      </div>
+      <a href="../admin/login-admin.html" class="admin-link">Админ</a>
+    </div>
+  </div>
+
+  <div class="categories-bar">
+    <button class="cat-btn active" data-category="all" data-i18n="cat-all">Все</button>
+    <button class="cat-btn" data-category="Кухонные мойки" data-i18n="cat-moiki">Мойки</button>
+    <button class="cat-btn" data-category="Смесители" data-i18n="cat-smes">Смесители</button>
+    <button class="cat-btn" data-category="Вытяжки" data-i18n="cat-vityaj">Вытяжки</button>
+    <button class="cat-btn" data-category="Газовые плиты" data-i18n="cat-plity">Газ плиты</button>
+    <button class="cat-btn" data-category="Духовки" data-i18n="cat-duhov">Духовки</button>
+    <button class="cat-btn" data-category="Микроволновки" data-i18n="cat-micro">Микроволновки</button>
+    <button class="cat-btn" data-category="Фильтры для воды" data-i18n="cat-filtr">Фильтры</button>
+    <button class="cat-btn" data-category="Кухонные аксессуары" data-i18n="cat-acc">Аксессуары</button>
+  </div>
+</header>
+
+<main class="catalog">
+  <div id="products" class="products-grid"></div>
+</main>
+
+<script src="js/catalog.js"></script>
+</body>
+</html>

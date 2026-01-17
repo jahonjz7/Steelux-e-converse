@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Админка — Steelux Bektopi</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("isAdmin") !== "true") {
+  window.location.href = "admin-login.html";
+}
+</script>
+
+<header class="admin-header">
+  <h1>Админка Steelux Bektopi</h1>
+  <button id="logout">Выйти</button>
+</header>
+
+<main class="admin-main">
+
+  <!-- Вкладки -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="add">Добавить товар</button>
+    <button class="tab-btn" data-tab="list">Список товаров</button>
+  </div>
+
+  <!-- Добавление товара -->
+  <section id="add" class="tab-content active">
+    <form id="product-form">
+      <div class="form-group">
+        <label>Название</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Категория</label>
+        <select id="category" required>
+          <option value="Кухонные мойки">Кухонные мойки</option>
+          <option value="Смесители">Смесители</option>
+          <option value="Вытяжки">Вытяжки</option>
+          <option value="Газовые плиты">Газовые плиты</option>
+          <option value="Духовки">Духовки</option>
+          <option value="Микроволновки">Микроволновки</option>
+          <option value="Фильтры для воды">Фильтры для воды</option>
+          <option value="Кухонные аксессуары">Аксессуары</option>
+          <option value="Полотенцесушители">Полотенцесушители</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Фото товара</label>
+        <input type="file" id="img" accept="image/*" required>
+        <img id="preview" style="max-width:100px; margin-top:10px; display:none;">
+      </div>
+
+      <div class="form-group">
+        <label>Цена</label>
+        <input type="number" id="price" required>
+      </div>
+
+      <div class="form-group">
+        <label>Старая цена</label>
+        <input type="number" id="oldPrice">
+      </div>
+
+      <div class="form-group">
+        <label>Описание</label>
+        <textarea id="description"></textarea>
+      </div>
+
+      <button type="submit">Добавить товар</button>
+    </form>
+  </section>
+
+  <!-- Список товаров -->
+  <section id="list" class="tab-content">
+    <div id="products-list" class="products-list"></div>
+    <button id="to-main" style="margin-top:20px;">Перейти на главную</button>
+  </section>
+
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+/* ===== ОБНУЛЕНИЕ И БАЗА ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+html, body {
+    overflow-x: hidden; /* Защита от горизонтального скролла */
+    background: #ffffff;
+    color: #111;
+    scroll-behavior: smooth;
+}
+
+/* ===== ХЕДЕР (ЧЕРНЫЙ И АДАПТИВНЫЙ) ===== */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.header-right-side {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+    color: #ffffff;
+}
+
+/* Переключатель языков */
+.lang-switcher {
+    display: flex;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.lang-btn.active {
+    background: #fff;
+    color: #111;
+}
+
+/* ===== HERO СЕКЦИЯ ===== */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)),
+                url("/Frontend/photo.front/frame41.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-tag {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 14px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 8vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: clamp(16px, 2vw, 19px);
+    opacity: 0.9;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== КОНТАКТЫ (АДАПТИВНАЯ СЕТКА) ===== */
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.contact-left, .contact-right {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.address-text {
+    font-size: 15px;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-right ul {
+    list-style: none;
+}
+
+.contact-right li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    margin-bottom: 12px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.contact-right li:hover {
+    background: #fff;
+    border-color: #000;
+    transform: translateX(5px);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.contact-number {
+    font-size: clamp(15px, 2vw, 17px);
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+}
+
+.call-btn {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== ЧЕРНЫЙ ФУТЕР ===== */
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* ===== МЕДИА-ЗАПРОСЫ (АДАПТИВНОСТЬ) ===== */
+
+/* Планшеты и телефоны (меньше 992px) */
+@media (max-width: 992px) {
+    .header {
+        padding: 20px 5%;
+    }
+    .header-right-side {
+        gap: 15px;
+    }
+}
+
+/* Мобильные телефоны (меньше 768px) */
+@media (max-width: 768px) {
+    .header {
+        position: relative; /* Чтобы не перекрывал Hero на маленьких экранах */
+        background: #000;
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .header-right-side {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        text-align: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero p {
+        margin-inline: auto;
+    }
+
+    .contact-section {
+        margin: 40px auto;
+        grid-template-columns: 1fr; /* Одна колонка на мобилках */
+    }
+}
+
+/* Совсем маленькие экраны (меньше 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .contact-right li {
+        padding: 15px;
+    }
+    
+    .contact-number {
+        font-size: 14px;
+    }
+}

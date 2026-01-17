@@ -1,0 +1,138 @@
+/* ===== 1. ОСНОВА ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #0a0a0a; /* Глубокий черный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+/* ===== 2. КОНТЕЙНЕР ЛОГИНА ===== */
+.login-wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    background: #111111; /* В тон основному бренду */
+    padding: 50px 40px;
+    border-radius: 24px;
+    border: 1px solid #222; /* Тонкая рамка для объема */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== 3. ТЕКСТЫ ===== */
+.login-box h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.login-box h2 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ===== 4. ПОЛЯ ВВОДА (INPUTS) ===== */
+.login-box label {
+    display: block;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    font-size: 15px;
+    background: #000;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-box input::placeholder {
+    color: #444;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-color: #ffffff;
+    background: #050505;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+/* ===== 5. КНОПКА (BUTTON) ===== */
+.login-box button {
+    width: 100%;
+    padding: 16px;
+    background: #ffffff; /* Инверсия: белая кнопка на черном фоне */
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #000;
+    margin-top: 10px;
+}
+
+.login-box button:hover {
+    background: #e0e0e0;
+    transform: scale(1.02);
+}
+
+.login-box button:active {
+    transform: scale(0.98);
+}
+
+/* ===== 6. ОШИБКИ ===== */
+#error-msg {
+    color: #ff4d4d;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 18px;
+}
+
+/* ===== 7. АДАПТИВНОСТЬ ===== */
+@media (max-width: 500px) {
+    .login-box {
+        padding: 40px 25px;
+        border-radius: 0; /* На мобилках можно на весь экран */
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+}
