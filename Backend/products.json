@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1769013101454,
+    "name": "Steelux 45x60",
+    "category": "Кухонные мойки",
+    "price": 123000,
+    "oldPrice": 200000,
+    "description": "",
+    "img": "1769013101412.png",
+    "available": true
+  },
+  {
+    "id": 1769539971090,
+    "name": "Steelux 45x60",
+    "category": "Кухонные мойки",
+    "price": 65,
+    "oldPrice": 65,
+    "description": "65",
+    "img": "1769539971043.png",
+    "available": true
+  }
+]

@@ -1,4 +1,4 @@
-/* ===== RESET & BASE ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -171,14 +171,14 @@ body {
 }
 
 .product-card p {
-    color: #888;
+    color: grey;
     font-size: 12px;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* Цена */
+
 .price-box {
     margin-top: auto;
     display: flex;
@@ -194,11 +194,11 @@ body {
 
 .old-price {
     font-size: 14px;
-    color: #bbb;
+    color: red;
     text-decoration: line-through;
 }
 
-/* Статус "Нет в наличии" */
+
 .out-badge {
     position: absolute;
     top: 25px;
@@ -212,7 +212,6 @@ body {
     z-index: 2;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .header-top {
         flex-direction: column;
