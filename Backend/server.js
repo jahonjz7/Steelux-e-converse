@@ -5,7 +5,7 @@ const fs = require("fs");
 const multer = require("multer");
 
 const app = express();
-const PORT = process.env.PORT || 3000; // ⭐ ОБЯЗАТЕЛЬНО ДЛЯ ХОСТА
+const PORT = process.env.PORT || 3000; 
 
 // ===== PATHS =====
 const FRONTEND = path.join(__dirname, "../frontend");
